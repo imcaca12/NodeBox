@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NodeBox — Simple NAS & Local Website Host</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #007acc;
+      margin-bottom: 0.2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #005ea2;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      background: #eaeaea;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+    code {
+      font-family: monospace;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NodeBox</h1>
+    <p><em>Simple NAS app & local website host for your home or office network.</em></p>
+  </header>
+
+  <section>
+    <h2>About NodeBox</h2>
+    <p>
+      NodeBox is a powerful and lightweight local content management and serving tool.
+      It enables easy sharing, streaming, and organizing of files and media on your home or office network —
+      without requiring internet access or complex setup.
+    </p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Serve and manage multiple local sites:</strong> Organize files and media into mini-websites or shared folders with an easy dashboard.</li>
+      <li><strong>Built-in media player:</strong> Stream audio and video directly from your browser with seamless playback over your local network.</li>
+      <li><strong>Storage quota management:</strong> Control disk usage by setting max storage sizes per shared site folder.</li>
+      <li><strong>User authentication and security:</strong> Protect your sites and dashboard with secure login credentials.</li>
+      <li><strong>Automatic local network discovery (mDNS/Bonjour):</strong> Connect by name (e.g., <code>yoursite.local</code>) without needing IP addresses.</li>
+      <li><strong>Cross-platform and lightweight:</strong> Runs on Linux, Windows, and macOS with minimal resource usage. Packaged as standalone executables.</li>
+      <li><strong>Extensible and customizable:</strong> Advanced users can add scripts and tweak configurations.</li>
+      <li><strong>Offline-first, zero internet dependency:</strong> Fully functional without internet — perfect for privacy and offline environments.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Usage</h2>
+    <p>Access the dashboard from your browser at:</p>
+    <ul>
+      <li><code>http://127.0.0.1:5000</code> (on the device running NodeBox)</li>
+      <li><code>http://&lt;your-device-ip&gt;:5000</code> (from other devices on your local network)</li>
+    </ul>
+    <p>Use the dashboard to create and deploy sites, manage media, and configure settings like storage quotas.</p>
+  </section>
+
+  <section>
+    <h2>Get & Run NodeBox</h2>
+    <p>Clone the code from GitHub:</p>
+    <p>
+      <a href="https://github.com/imcaca12/NodeBox/blob/main/NodeBox" target="_blank" rel="noopener noreferrer">
+        https://github.com/imcaca12/NodeBox/blob/main/NodeBox
+      </a>
+    </p>
+
+    <h3>Installation & Startup</h3>
+    <ol>
+      <li>Clone the repo using git:
+        <pre><code>git clone https://github.com/imcaca12/NodeBox.git</code></pre>
+      </li>
+      <li>Open the <code>NodeBox</code> folder.</li>
+      <li>Make the <code>NodeBox</code> file executable:
+        <pre><code>chmod +x NodeBox</code></pre>
+      </li>
+      <li>Set NodeBox to auto-start on reboot by running:
+        <pre><code>(crontab -l 2>/dev/null; echo "@reboot /home/pi/ptl/dist/NodeBox &amp;") | crontab -</code></pre>
+      </li>
+      <li>(Optional) Reboot your device and visit your Pi’s IP in the browser.</li>
+      <li>If you don’t reboot, start NodeBox manually with:
+        <pre><code>./NodeBox</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    &copy; 2025 NodeBox — Your local content hub and media server made simple.
+  </footer>
+
+</body>
+</html>
