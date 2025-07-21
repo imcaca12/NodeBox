@@ -83,11 +83,12 @@
 
   <section>
     <h2>Usage</h2>
-    <p>Access the dashboard from your browser at:</p>
+    <p>Access the NodeBox dashboard in your browser at:</p>
     <ul>
       <li><code>http://127.0.0.1:5000</code> (on the device running NodeBox)</li>
-      <li><code>http://&lt;your-device-ip&gt;:5000</code> (from other devices on your local network)</li>
+      <li><code>http://&lt;your-device-ip&gt;:5000</code> (from any other device on the same local network)</li>
     </ul>
+    <p>Tip: If you're running NodeBox on a Raspberry Pi, visit <strong>your Pi's IP address at port 5000</strong> (e.g., <code>http://192.168.1.100:5000</code>).</p>
     <p>Use the dashboard to create and deploy sites, manage media, and configure settings like storage quotas.</p>
   </section>
 
@@ -109,10 +110,10 @@
       <li>Make the <code>NodeBox</code> file executable:
         <pre><code>chmod +x NodeBox</code></pre>
       </li>
-      <li>Set NodeBox to auto-start on reboot by running:
-        <pre><code>(crontab -l 2>/dev/null; echo "@reboot /home/pi/ptl/dist/NodeBox &amp;") | crontab -</code></pre>
+      <li>Run the startup script to enable NodeBox to launch on boot:
+        <pre><code>./startservice.sh</code></pre>
       </li>
-      <li>(Optional) Reboot your device and visit your Pi’s IP in the browser.</li>
+      <li>(Optional) Reboot your device and visit <strong>http://&lt;your-Pi-IP&gt;:5000</strong> in your browser.</li>
       <li>If you don’t reboot, start NodeBox manually with:
         <pre><code>./NodeBox</code></pre>
       </li>
