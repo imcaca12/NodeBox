@@ -31,9 +31,6 @@ It enables easy sharing, streaming, and organizing of files and media on your ho
 - **Extensible and customizable**  
   Allows advanced users to extend functionality, add custom scripts, and tweak configurations.
 
-- **Offline-first, zero internet dependency**  
-  Fully functional without internet, maintaining privacy and accessibility in offline environments.
-
 ---
 
 ## Usage
